@@ -45,5 +45,5 @@ Current features
 
 TO DO
 =====
-1. If <a> tag is found, jsnippet should expect an object that will have the URL as a key, and TEXT as another key to properly set the <a> element. 
+1. If `<a>` tag is found, jsnippet should expect an object that will have the URL as a key, and TEXT as another key to properly set the `<a>` element. 
 2. Add multiple iterators to snippets or allow the iterator to be defined in another way. 
