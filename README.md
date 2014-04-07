@@ -8,8 +8,8 @@ jSnippets is a javasript library that grabs an HTML file that contains different
 
 Requirements
 ============
-1. jQuery
-2. Bootstrap
+1. `jQuery`
+2. `Bootstrap`
 
 Snippets declaration
 ====================
@@ -26,16 +26,16 @@ There are, some *reserved* data attributes. They are the following:
 
 Methods
 =======
-1. jsnippets.init(path); 
+1. `jsnippets.init(path);`
 This function is getting the path argument which represents the path to the snippets HTML file. This loads all the snippets within an property of _jsnippets_ object. 
-2. jsnippets.load(snippet_id); 
+2. `jsnippets.load(snippet_id);` 
 This represents the snippet ID to load from the file. This will be loaded as the current object to work with within the following methods.
-3. jsnippets.unload(); 
+3. `jsnippets.unload();` 
 Unloads the current working snippet from the memory.
-4. jsnippets.dataload(object);
+4. `jsnippets.dataload(object);`
 This receives an object representing the data to be bound to the snippet. Example of an object can be:
 `{iterator:[{name:'alex',field:'test'},{name:'alex',field:'test'},{name:'alex',field:'test'},{name:'alex',field:'test'}],othername:'alex'}`
-5. jsnippets.appendTo(div);jsnippets.prependTo(div);jsnippets.replace(div);
+5. `jsnippets.appendTo(div);jsnippets.prependTo(div);jsnippets.replace(div);`
 Those methods append,prepend, or replace the content of a #div/.div/DOM element with the current loaded snippet. Also, after the snippet is appended/prepended/replaced the library calls jsnippet.unload(); to clear the memory;
 
 Current features
