@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Jsnippets by roshkattu</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Jsnippets</h1>
+        <h2>AJAX html snippets builder</h2>
+        <a href="https://github.com/roshkattu/jsnippets" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a name="jsnippets" class="anchor" href="#jsnippets"><span class="octicon octicon-link"></span></a>jSnippets</h2>
+
+<p><em>V 0.0.1</em>-alpha</p>
+
+<hr><p>jSnippets is a javasript library that grabs an HTML file that contains different HTML code snippets and allows you to use the snippet element to be appended,prepended or to replace the contents of a given DIV element from the DOM of the current file.</p>
+
+<h1>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h1>
+
+<ol>
+<li><code>jQuery</code></li>
+<li><code>Bootstrap</code></li>
+</ol><h1>
+<a name="snippets-declaration" class="anchor" href="#snippets-declaration"><span class="octicon octicon-link"></span></a>Snippets declaration</h1>
+
+<p>Snippets should be declared in the following form
+&lt;!--snippet#id_here--&gt; html &lt;!--snippet#id_here_end--&gt;
+Also, the snippets HTML should be ALWAYS defined within a <em></em> element to avoid multiple elements selection problem so that jquery <em>.find()</em> function can find the targeted divs by their data attribute</p>
+
+<h1>
+<a name="application" class="anchor" href="#application"><span class="octicon octicon-link"></span></a>Application</h1>
+
+<p>jSnippets grabs the <em>html code snippets</em> and uses the data attribute to set different things for the snippet.
+There are, some <em>reserved</em> data attributes. They are the following:</p>
+
+<ol>
+<li>
+<em>data-iterator</em> ~ Represents an element that has child elements that will be iterated within a $.each structure there is only 1 iterator field allowed by now</li>
+</ol><h1>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h1>
+
+<ol>
+<li>
+<code>jsnippets.init(path);</code>
+This function is getting the path argument which represents the path to the snippets HTML file. This loads all the snippets within an property of <em>jsnippets</em> object. </li>
+<li>
+<code>jsnippets.load(snippet_id);</code> 
+This represents the snippet ID to load from the file. This will be loaded as the current object to work with within the following methods.</li>
+<li>
+<code>jsnippets.unload();</code> 
+Unloads the current working snippet from the memory.</li>
+<li>
+<code>jsnippets.dataload(object);</code>
+This receives an object representing the data to be bound to the snippet. Example of an object can be:
+<code>{iterator:[{name:'alex',field:'test'},{name:'alex',field:'test'},{name:'alex',field:'test'},{name:'alex',field:'test'}],othername:'alex'}</code>
+</li>
+<li>
+<code>jsnippets.appendTo(div);jsnippets.prependTo(div);jsnippets.replace(div);</code>
+Those methods append,prepend, or replace the content of a #div/.div/DOM element with the current loaded snippet. Also, after the snippet is appended/prepended/replaced the library calls jsnippet.unload(); to clear the memory;</li>
+</ol><h1>
+<a name="current-features" class="anchor" href="#current-features"><span class="octicon octicon-link"></span></a>Current features</h1>
+
+<ol>
+<li>If <img> tag is found within the snippet, jSnippets expects to have an URL of the image to build the image.</li>
+</ol><h1>
+<a name="to-do" class="anchor" href="#to-do"><span class="octicon octicon-link"></span></a>TO DO</h1>
+
+<ol>
+<li>If <code>&lt;a&gt;</code> tag is found, jsnippet should expect an object that will have the URL as a key, and TEXT as another key to properly set the <code>&lt;a&gt;</code> element. </li>
+<li>Add multiple iterators to snippets or allow the iterator to be defined in another way. </li>
+</ol>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/roshkattu/jsnippets/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/roshkattu/jsnippets/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/roshkattu/jsnippets"></a> is maintained by <a href="https://github.com/roshkattu">roshkattu</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
