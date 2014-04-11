@@ -74,11 +74,25 @@ if(typeof window.jsnippets === 'undefined'){
                     var clone = iterator.clone();
                     $.each(this,function(k,v){
                         var domobj = $(clone).find("[data-"+k+"]");
-                        //Check object type
-                        if(domobj.prop('tagName') === 'IMG'){
-                            domobj.attr('src',v)
-                        } else {
-                            domobj.html(v);
+                        //Switch the type of the object
+                        switch(domobj.prop('tagName')){
+                            //Images
+                            case 'IMG':
+                                domobj.attr('src',v);
+                            break;
+                            //Anchors
+                            case 'A':
+                                domobj.attr('href',v);
+                                domobj.html(v);
+                            break;
+                            //iFrame
+                            case 'IFRAME':
+                                domobj.attr('href',v);
+                            break;
+                            //Other elements
+                            default:
+                                domobj.html(v);
+                            break;
                         }
                     });
                     //Append the clone to the parent
